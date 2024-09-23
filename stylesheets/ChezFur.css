@@ -1,0 +1,46 @@
+/*  styles for small screens */
+body {
+    background-color: peru;
+    color: bisque;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    background-color: saddlebrown;
+    color: gainsboro;
+}
+
+footer a {
+    color: moccasin;
+    text-decoration: none;
+}
+
+
+/* Styles for screens wider than 750px */
+@media only screen and (min-width: 750px) {
+    body {
+        background-color: maroon;
+        color: moccasin;
+    }
+
+    /* Configuring the styles and colors needed for specific elements on larger screens*/
+    header h1,
+    header h3 {
+        background-color: peru;
+        color: moccasin;
+        margin: 0;
+        padding: 10px;
+        font-family: Georgia, serif;
+
+    }
+
+    /*Set specific colors, padding and font family for the header nav element for larger screens */
+    header nav {
+        background-color: maroon;
+        color: moccasin;
+        padding: 10px;
+        font-family: Georgia, serif;
+       
+    }
+
+}
