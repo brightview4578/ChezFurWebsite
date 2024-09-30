@@ -1,4 +1,13 @@
 /*  styles for small screens */
+/*  Header Image for Small Screen */
+
+header {
+    background-image: url('../images/LogoSmall.png');
+    background-position: right top;
+    background-repeat: no-repeat;
+    min-height: 50px;
+}
+
 body {
     background-color: peru;
     color: bisque;
@@ -15,6 +24,27 @@ footer a {
     text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/*  Header Image for large screen */
+@media (min-width: 750px) {
+    header {
+        
+        background-image: url('../images/LogoLarge.png');
+        background-position: right top;
+        background-repeat: no-repeat;
+        min-height: 100px;
+        padding: 10px;
+    }
+    img {
+        max-width: 600px; 
+    }
+}
 
 /* Styles for screens wider than 750px */
 @media only screen and (min-width: 750px) {
@@ -22,25 +52,4 @@ footer a {
         background-color: maroon;
         color: moccasin;
     }
-
-    /* Configuring the styles and colors needed for specific elements on larger screens*/
-    header h1,
-    header h3 {
-        background-color: peru;
-        color: moccasin;
-        margin: 0;
-        padding: 10px;
-        font-family: Georgia, serif;
-
-    }
-
-    /*Set specific colors, padding and font family for the header nav element for larger screens */
-    header nav {
-        background-color: maroon;
-        color: moccasin;
-        padding: 10px;
-        font-family: Georgia, serif;
-       
-    }
-
 }
