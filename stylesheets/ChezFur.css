@@ -1,5 +1,21 @@
+
+/*
+Selection of the color palette:
+
+I created my color palette using the Canva Color Palette Generator and Adobe Color, which provided a great foundation for selecting colors that look good together and create the right feel for my project.
+
+For the small screen’s body  background I chose a Light Pink background with Medium Violet Red text to create a soft, inviting atmosphere while maintaining readability with a contrast ratio of 3.30:1. For the main  background I chose The Plum background paired with Medium Orchid text adds elegance with the contrast ratio of 4.91:1.
+I chose the Powder Blue background with Dark Slate Gray text for the body background of the larger screens to enhance readability and create a calming visual effect and it has a contrast ratio of 6.23:1. The combination of Sky Blue and Navy Blue for the main tag further elevates the design with a high contrast ratio  of 9.33 : 1 and also makes it visually appealing. 
+
+For the menu-aside section, I selected a Pale Yellow background with Dark Gray text to achieve an excellent contrast ratio of 12.04:1 for making it easy to read.
+
+For highlighting the allergy warning effectively I chose the Gold background with Indigo text which offers a contrast ratio of 9.23:1.
+
+I also chose vibrant colors for the navigation links such as Bright Blue for active links, Dark Green for visited links, Orange Red for hover effects, and Tomato for active links  to create a dynamic and engaging user experience. 
+*/
+
+
 /*  styles for small screens */
-/*  Header Image for Small Screen */
 
 header {
     background-image: url('../images/LogoSmall.png');
@@ -9,14 +25,15 @@ header {
 }
 
 body {
-    background-color: peru;
-    color: bisque;
+    background-color: #FFB6C1;
+    color: #C71585;
     font-family: Arial, sans-serif;
 }
 
 main {
-    background-color: saddlebrown;
-    color: gainsboro;
+
+    background-color: #DDA0DD;
+    color: #592F70; 
 }
 
 footer a {
@@ -31,25 +48,177 @@ img {
 }
 
 
-/*  Header Image for large screen */
+.menu-aside {
+    background-color: #FFFF99;
+    color: #333333;
+}
+
+.menu-heading {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+/*Remove bullets from the menu list */
+.menu-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Style each menu (li) */
+.menu-category {
+    font-weight: bold;
+    font-size: 1.35em;
+    margin: 0.5em 0;
+    margin-bottom: 1em;
+}
+
+/* Style the menu list (dt) */
+.menu-item-name {
+    font-weight: bold;
+    font-size: 0.85em;
+}
+
+
+/* Style the menu list description list (dd) */
+.menu-item-description {
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 1em;
+}
+
+/* Adjust spacing for sections */
+.menu-section {
+    margin-bottom: 2em;
+}
+
+.allergy-warning {
+    background-color: #FFD700;
+    color: #4B0082;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Pacifico', cursive;
+    padding: 10px;
+
+}
+
+.menu-background-page {
+    /*Image Source: https://www.pexels.com/photo/gray-surface-3255761/  */
+    background-image: url('../images/MenuPageBackground.png');
+    width: 80%;
+    margin: 0;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+}
+
+.menu-page {
+    padding: 5px 0; 
+}
+
+
+.hostCat-image {
+    display: block;
+
+}
+
+.hostCat-image img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hostCat-image-figcaption {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.hosts-section {
+    background-color: #FFFACD;
+    border-radius: 10px;
+    width: 90%;
+    margin: 0;
+}
+
+.hosts-container {
+    text-align: center;
+}
+
+a:link {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* Style for visited links */
+a:visited {
+    color: #006400;
+    text-decoration: none;
+}
+
+/* Style when the link is hovered */
+a:hover {
+    color: #FF4500;
+    font-size: 1.1em;
+   
+    text-decoration: underline;
+}
+
+/* Style for active link clicked */
+a:active {
+    color: #FF6347;
+    text-decoration: none;
+}
+
+/* Keep list items inline */
+a {
+    display: inline;
+    margin-right: 15px;
+}
+
+span {
+    font-style: italic;
+}
+
+#page-title {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 3em;
+   
+}
+
+/*Media Query for screens wider than 750px */
 @media (min-width: 750px) {
     header {
-        
+
         background-image: url('../images/LogoLarge.png');
         background-position: right top;
         background-repeat: no-repeat;
-        min-height: 100px;
+        min-height: 10px;
         padding: 10px;
-    }
-    img {
-        max-width: 600px; 
-    }
-}
 
-/* Styles for screens wider than 750px */
-@media only screen and (min-width: 750px) {
+    }
+
     body {
-        background-color: maroon;
-        color: moccasin;
+        background-color: #B0E0E6;
+        color: #2F4F4F;
+    }
+
+    main {
+        background-color: #87CEFA;
+        color: #000080;  
+    }
+
+    img {
+        max-width: 600px;
+    }
+
+    @media (min-width: 750px) {
+        .hostCat-image img {
+            width: 180px;
+            height: 180px;
+        }
+
     }
 }
