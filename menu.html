@@ -14,119 +14,147 @@
     <header>
         <h1 id="page-title">Chez Fur</h1>
         <h3>by Suzy Schaffer</h3>
-
-        <nav>
-
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="your-hosts.html">Your Hosts</a>
-            <a href="contact.html">Contact</a>
-
-        </nav>
-
-        <aside class="menu-aside">Enjoy our food while you visit with our friendly hosts! We have selections for
-            appetites big and small.
-        </aside>
-
     </header>
 
+    <main>
 
-    <main class="menu-page">
-        <section class="menu-background-page">
+        <div class="container">
 
-            <h2 class="menu-heading">Our Menu</h2>
+            <!-- create a structure for the page with rows and columns-->
+            <div class="row">
 
-            <div class="menu-section">
-                <ul class="menu-list">
-                    <li class="menu-category">Nibbles
-                        <dl>
-                            <dt class="menu-item-name">Purrfect Salad</dt>
-                            <dd class="menu-item-description">Small salad with arugula, tomatoes, carrots, cucumber, and crunchy croutons with vinaigrette dressing. Add just a pinch of catnip for a minty touch -- Sure to get our hosts’ attention. $7</dd>
-                            
-                            <dt class="menu-item-name">Cheesy Bites</dt>
-                            <dd class="menu-item-description">Golden fried cheese balls served with a side of marinara. Perfect for snacking. $5</dd>
-                        </dl>
-                    </li>
-                </ul>
+                <!-- First column should have 20% width -->
+                <div class="column column-20">
+                    <nav>
+                        <ul class="nav-list">
+
+                            <li><a href="index.html">Home</a></li>
+                            <li> <a href="menu.html">Menu</a></li>
+                            <li> <a href="your-hosts.html">Your Hosts</a></li>
+                            <li> <a href="contact.html">Contact</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Second column should have 80% width -->
+                <div class="column column-80 ">
+
+
+                    <img class="img2" src="images/CatsEnjoyingFoodSmallerImage.png"
+                        alt="Cats sitting on dining table chairs enjoying treats in a cozy café setting.">
+
+                </div>
             </div>
 
-            <div class="menu-section">
-                <ul class="menu-list">
-                    <li class="menu-category">Fancy Feasts
-                        <dl>
-                            <dt class="menu-item-name">Too Too Tuna</dt>
-                            <dd class="menu-item-description">A favorite among all our hosts. Fresh Albacore Tuna with
-                                lettuce,
-                                tomato, vegan mayo, and your
-                                choice of white, wheat, or gluten-free bread. $12</dd>
+            <!-- Add one more row for the aside and menu content-->
+            <div class="row">
+                <div class="column column-20">
 
-                            <dt class="menu-item-name">Purrfect Veggie Delight</dt>
-                            <dd class="menu-item-description">A hearty sandwich with roasted red peppers, avocado, and a
-                                tangy basil
-                                pesto on a toasted bun.
-                                Served with a side of crispy potato fries. $10.</dd>
-                        </dl>
-                    </li>
-                </ul>
+                    <aside class="menu-aside">Enjoy our food while you visit with our friendly hosts! We have selections
+                        for
+                        appetites big and small.
+                    </aside>
+
+                </div>
+                <div class="column column-80">
+
+                    <div class="menu-background-page">
+                        <h1 class="menu-heading">Our Menu</h1>
+                        <section class="menu-items">
+
+                            <h2>Nibbles</h2>
+                            <dl>
+                                <dt> Purrfect Salad</dt>
+                                <dd>Small salad with arugula, tomatoes, carrots,
+                                    cucumber, and
+                                    crunchy croutons with vinaigrette dressing. Add just a pinch of catnip for a
+                                    minty touch
+                                    -- Sure to get our hosts’ attention. $7</dd>
+
+                                <dt>Cheesy Bites</dt>
+                                <dd>Golden fried cheese balls served with a side of
+                                    marinara.
+                                    Perfect for snacking. $5</dd>
+                            </dl>
+
+                            <h2>Fancy Feasts</h2>
+                            <dl>
+                                <dt>Too Too Tuna</dt>
+                                <dd>A favorite among all our hosts. Fresh Albacore
+                                    Tuna with
+                                    lettuce,
+                                    tomato, vegan mayo, and your
+                                    choice of white, wheat, or gluten-free bread. $12</dd>
+
+                                <dt>Purrfect Veggie Delight</dt>
+                                <dd>A hearty sandwich with roasted red peppers,
+                                    avocado, and a
+                                    tangy basil
+                                    pesto on a toasted bun.
+                                    Served with a side of crispy potato fries. $10.</dd>
+                            </dl>
+
+                            <h2>Treats</h2>
+                            <dl>
+                                <dt>Cat Pop</dt>
+                                <dd>Classic vanilla Cake Pop with chocolate icing
+                                    “fur,” and
+                                    white
+                                    icing
+                                    whiskers. Also available in
+                                    chocolate cake. $3</dd>
+
+                                <dt>Kitty Cookies</dt>
+                                <dd>Mini donuts with colorful sprinkles and a
+                                    subtle
+                                    hint of
+                                    vanilla—purrfect for a sweet treat $4</dd>
+                            </dl>
+
+                            <h2>Drinks</h2>
+                            <dl>
+                                <dt class="menu-item-name">Purrfect Latte</dt>
+                                <dd class="menu-item-description">A creamy latte topped with creamy foam and
+                                    hint of
+                                    vanilla.
+                                    Available
+                                    hot or iced. $5</dd>
+
+                                <dt class="menu-item-name">Whisker chai</dt>
+                                <dd class="menu-item-description">A smooth chai tea latte blended with
+                                    cinnamon,
+                                    ginger, and
+                                    frothy milk. $5</dd>
+
+                                <dt class="menu-item-name">Kitty Cooler</dt>
+                                <dd class="menu-item-description">A sparkling lemonade with the flavour of
+                                    fresh
+                                    berries. $4
+                                </dd>
+                            </dl>
+
+                        </section>
+
+                    </div>
+
+                    <div class="allergy-warning">
+                        Please let the staff know if you have any food sensitivities before placing your order.
+                    </div>
+
+                </div>
             </div>
-
-            <div class="menu-section">
-                <ul class="menu-list">
-                    <li class="menu-category">Treats
-                    <dl>
-                        <dt class="menu-item-name">Cat Pop</dt>
-                        <dd class="menu-item-description">Classic vanilla Cake Pop with chocolate icing “fur,” and white
-                            icing
-                            whiskers. Also available in
-                            chocolate cake. $3</dd>
-
-                        <dt class="menu-item-name">Kitty Cookies</dt>
-                        <dd class="menu-item-description">Mini donuts with colorful sprinkles and a subtle hint of
-                            vanilla—purrfect for a sweet treat $4</dd>
-                    </dl>
-                </li>
-                </ul>
-            </div>
-
-            <div class="menu-section">
-                <ul class="menu-list">
-                    <li class="menu-category">Drinks
-                    <dl>
-                        <dt class="menu-item-name">Purrfect Latte</dt>
-                        <dd class="menu-item-description">A creamy latte topped with creamy foam and hint of vanilla.
-                            Available
-                            hot or iced. $5</dd>
-
-                        <dt class="menu-item-name">Whisker chai</dt>
-                        <dd class="menu-item-description">A smooth chai tea latte blended with cinnamon, ginger, and
-                            frothy milk. $5</dd>
-
-                        <dt class="menu-item-name">Kitty Cooler</dt>
-                        <dd class="menu-item-description">A sparkling lemonade with the flavour of fresh berries. $4
-                        </dd>
-                    </dl>
-                </li>
-                </ul>
-            </div>
-
-        </section>
-
-        <div class="allergy-warning">
-            Please let the staff know if you have any food sensitivities before placing your order.
         </div>
-
     </main>
 
 
-    
-
-
-    <!--Footer for the webpage-->
+    <!-- Add footer -->
     <footer>
         <p>Copyright &copy; 2024 Suzy Schaffer<br>
             <a href="mailto:yourfirstname@yourlastname.com">yourfirstname@yourlastname.com</a>
         </p>
     </footer>
+  
 </body>
 
 </html>
