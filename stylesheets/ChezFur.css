@@ -48,7 +48,6 @@ img {
     display: block;
 }
 
-
 .menu-aside {
     background-color: #FFFF99;
     color: #333333;
@@ -64,7 +63,6 @@ img {
 
 .menu-items {
     width: 80%;
-    /*margin: 0 auto;*/
     margin: 0.5em;
 
 }
@@ -85,7 +83,6 @@ dd {
 }
 
 .allergy-warning {
-    /*background-color: #FFD700;*/
     color: #4B0082;
     font-size: 1.1em;
     font-weight: bold;
@@ -122,52 +119,70 @@ figcaption {
     text-align: center;
 }
 
-/* Background Page for the host cat images */
-.hosts-section {
+
+
+/* A flex container for the pictures of host cats */
+.cat-gallery {
+    flex-wrap: wrap; /* wrap the container items */
+    display: flex;
+    justify-content: space-around; /* evenly space out images on the page */
+    text-align: center;
     background-color: #FFFACD;
-    border-radius: 10px;
-    width: 90%;
-    margin: 0;
-}
-
-.hosts-container {
-    text-align: center;
-}
-
-/* Remove bullets from tne list */
-.nav-list {
-    list-style-type: none;
-    padding-left: 0;
-    text-align: center;
+    border-radius: 10px; 
+    width: 100%;
+    height: 100%;
     margin: 0;
 
 }
 
-/* Make list items inline */
-.nav-list li {
-  
-    display: inline-block;
-    margin-right: 5px;
+.logo-container {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: #FFFFFF;
+    width: 100%;
+    margin: 0;
 
 }
-/* Change link color on hover */
-.nav-list li a {
-    display: block;
-    padding: 10px 15px;
-    text-align: center;
+
+/* Small screen navigation */
+.navcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav a {
     text-decoration: none;
     font-size: 14px;
     background-color: #592F70;
     color: white;
     border-radius: 5px;
-    /*width: 80px;*/
-
+    padding: 10px 15px;
+    text-align: center;
+    margin: 5px;
+    display: block;
+    width: auto;
+    margin-right: 0;
 }
 
-/* Hover effect for the link*/
-.nav-list li a:hover {
-    background-color: #333;
-    color: white;
+/* Hover effect */
+nav a:hover {
+    background-color: #4a235a;
+}
+
+nav a:visited {
+    color: #FFD700;
+}
+
+.navcontainer-for-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 span {
@@ -211,40 +226,44 @@ a:hover {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-      }
+    }
 
 
     /* Row class to contain columns */
     .row {
-      margin-top: 10px; 
-      margin-bottom: 10px; 
-      display: flex; 
-      flex-wrap: wrap; 
-      padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
 
     }
 
     /* Column class */
     .column {
-      padding: 2px;
+        padding: 2px;
     }
 
     /* Left Column width control */
     .column-20 {
-      flex: 0 0 20%;  /*Left column: 20% width */
-     
+        flex: 0 0 20%;
+        
+
     }
+
+     /* Right Column width control */
 
     .column-80 {
-      flex: 1      /* Right column should take the remaining space */
+        flex: 1
+            
     }
 
-    
+
     img {
         max-width: 100%;
-        max-height: 400px; 
-        height: 100%; 
-        border-radius: 5px; 
+        max-height: 400px;
+        height: 100%;
+        border-radius: 5px;
     }
 
     header {
@@ -256,22 +275,26 @@ a:hover {
 
     }
 
-    /* Style for navigation list */
-    .nav-list {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        width:100%;
+    .navcontainer-for-menu {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        width: 200px;
     }
 
-    /* Style individual navigation links */
-    .nav-list li {
-        margin-bottom: 15px;
+    .navcontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 200px;
+        height: 100vh;
+        flex-basis: 20%;
+        padding: 10px;
+
     }
 
-    .nav-list li a {
+    nav a {
+
         display: block;
         background-color: #000080;
         color: white;
@@ -281,27 +304,24 @@ a:hover {
         font-size: 18px;
         border-radius: 8px;
         width: 200px;
-       
+        width: 100%;
+        margin-bottom: 20px;
+
     }
 
-    /* Change link color on hover */
-    .nav-list li a:hover {
+    nav a:hover {
         background-color: #555;
         color: #fff;
+    }
+
+    nav a:visited {
+        color: #FFD700;
     }
 
     body {
         background-color: #B0E0E6;
         color: #2F4F4F;
     }
-
-    main {
-        background-color: #87CEFA;
-        color: #000080;
-    }
-
-
-    /* Increase the rounded corners and padding for large screen*/
 
     .menu-aside {
         padding: 10px;
@@ -322,8 +342,30 @@ a:hover {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-    
-      }
+
+    }
+
+
+    /* Flexbox for the large screen */
+    .main-nav-container {
+        display: flex;
+        height: 100vh;
+    }
+
+
+
+    /* Styling the main content area */
+    main {
+        height: 100vh;
+        flex-grow: 1; /*main content fills the remaining space */
+        overflow: scroll;
+        background-color: #87CEFA;
+        color: #000080;
+        max-width: 100%;
+        flex-basis: 80%;
+
+    }
+
 
 
 }
