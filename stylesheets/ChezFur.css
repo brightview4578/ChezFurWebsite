@@ -40,8 +40,6 @@ footer a {
     text-decoration: none;
 }
 
-
-
 img {
     max-width: 100%;
     height: auto;
@@ -123,12 +121,14 @@ figcaption {
 
 /* A flex container for the pictures of host cats */
 .cat-gallery {
-    flex-wrap: wrap; /* wrap the container items */
+    flex-wrap: wrap;
+    /* wrap the container items */
     display: flex;
-    justify-content: space-around; /* evenly space out images on the page */
+    justify-content: space-around;
+    /* evenly space out images on the page */
     text-align: center;
     background-color: #FFFACD;
-    border-radius: 10px; 
+    border-radius: 10px;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -178,7 +178,7 @@ nav a:visited {
     color: #FFD700;
 }
 
-.navcontainer-for-menu{
+.navcontainer-for-menu {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -218,6 +218,79 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Adoption page grid container for small screen with 3 columns and 3 rows*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 10px;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Grid items */
+.grid-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Control the positionining of images using grid-column and grid-row */
+
+.img2 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.img1 {
+    grid-column: 2;
+    grid-row: 1;
+
+}
+
+/* Wide image spanning multiple columns in the grid */
+.wide-img {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+
+}
+
+/* Long image spanning multiple rows in the grid */
+.long-img {
+    grid-column: 3;
+    grid-row: 1 / span 3;
+}
+
+.img4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img5 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.img6 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#adoption-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #4B0082;
+}
+
+#adoption-text {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+}
+
+
 
 /*Media Query for screens wider than 750px */
 @media (min-width: 750px) {
@@ -247,24 +320,16 @@ a:hover {
     /* Left Column width control */
     .column-20 {
         flex: 0 0 20%;
-        
+
 
     }
 
-     /* Right Column width control */
+    /* Right Column width control */
 
     .column-80 {
         flex: 1
-            
     }
 
-
-    img {
-        max-width: 100%;
-        max-height: 400px;
-        height: 100%;
-        border-radius: 5px;
-    }
 
     header {
         background-image: url('../images/LogoLarge.png');
@@ -333,6 +398,13 @@ a:hover {
         height: 180px;
     }
 
+    .img-default {
+        max-width: 100%;
+        max-height: 400px;
+        height: 100%;
+        border-radius: 5px;
+    }
+
     /* Style for the hero image of the menu page */
     .img2 {
         width: 90%;
@@ -345,6 +417,63 @@ a:hover {
 
     }
 
+    /* Grid container for Adoption page on large screens with 5 columns and 3 rows */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 10px;
+        width: 100%;
+        height: 100vh;
+    }
+
+
+    .grid-item {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    .img2 {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+    .img1 {
+        grid-column: 3 / span 3;
+        grid-row: 1;
+    }
+
+    /* Wide image spanning multiple columns in the grid */
+    .wide-img {
+        grid-column: 1 / span 4;
+        grid-row: 2;
+    }
+
+    /* long image spanning multiple rows in the grid */
+    .long-img {
+        grid-column: 5;
+        grid-row: 2 / span 4;
+        width: 100%;
+        height: 100%;
+    }
+
+    .img4 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .img5 {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+    }
+
+    .img6 {
+        grid-column: 3 / span 2;
+        grid-row: 3;
+    }
 
     /* Flexbox for the large screen */
     .main-nav-container {
@@ -352,12 +481,11 @@ a:hover {
         height: 100vh;
     }
 
-
-
     /* Styling the main content area */
     main {
         height: 100vh;
-        flex-grow: 1; /*main content fills the remaining space */
+        flex-grow: 1;
+        /*main content fills the remaining space */
         overflow: scroll;
         background-color: #87CEFA;
         color: #000080;
@@ -365,7 +493,5 @@ a:hover {
         flex-basis: 80%;
 
     }
-
-
 
 }
