@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+/* ------------------------------------------------------------------
+ * This CSS was easily created using Dreamweaver to use customzied styling
+ * for three different screen sizes. 
+ * The new CSS style is used by the index-2.html page
+ * The Navbar has been added using bootstrap from Dreamweaver
+ * For small and medium screen size, the text content on the page is shown below the cat image.
+ * For large scrren sizes, the content on the page is shown next to the cat image for larger screens
+------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+ * 
+ * CSS rules for small screens 
+ *
+-------------------------------------------------------------------*/
+
+.content-container {
+	flex-direction: column; 
+	text-align: left;
+}
+
+.navbar-nav {
+	flex-direction: column; 
+}
+
+/* In Dreamweaever, it is very easy to select the color and font using the CSS Designer tool */
+body {
+	background-color: #FFB6C1;
+	color: #C71585;
+	font-family: Arial, sans-serif;
+}
+
+main{
+	padding: 10px;
+}
+
+.main-left-container {
+	padding: 10px;
+}
+
+.main-right-container {
+	padding: 10px;
+}
+
+#page-title {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 3em;
+
+}
+
+header {
+    background-image: url('../images/LogoSmall.png');
+    background-position: right top;
+    background-repeat: no-repeat;
+    min-height: 50px;
+}
+
+main img  {
+	width: 80%;
+}
+
+/* In Dreamweaver, it is very easy to add the Bootstrap navigation bar and customize the look and feel */
+.navbar {
+	background-color: #DDA0DD;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+	transition: all 0.3s ease; 
+}
+
+/* Change the color of menu options */
+.navbar-nav .nav-link {
+	color: #fff; 
+	transition: color 0.3s ease; 
+}
+
+/* Customize the hover effect for menu options */
+.navbar-nav .nav-link:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 4px; 
+}
+
+/* Customize the styling for the active link */
+.navbar-nav .nav-link.active {
+	font-weight: bold; 
+}
+
+
+/*-------------------------------------------------------------------
+ * 
+ * CSS rules for medium screens 
+ *
+-------------------------------------------------------------------*/
+
+/* In Dreamweaver, the media query was created automatically in the CSS 
+ * by selecting screen size from the Live View options 
+ */
+
+/* Common tags and classes were easily included within the media query 
+ * by copying and pasting them directly in the CSS Designer 
+ */
+
+@media (min-width: 750px) {
+	
+	.content-container {
+		flex-direction: column; 
+	}
+
+	body {
+        background-color: #6cdaa7;
+        color: #2862b4;
+	    font-family: Arial, sans-serif;
+    }
+	
+	header {
+		background-image: url('../images/LogoLarge.png');
+		background-position: right top;
+		background-repeat: no-repeat;
+		min-height: 10px;
+		padding: 20px;
+	}
+	
+	.navbar {
+		background-color:#3eb47d;
+        color: white;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+		transition: all 0.3s ease; 
+	}
+
+	main-left-container {
+		padding: 10px;
+	}
+	
+	main-right-container {
+		padding: 10px;
+	}	
+
+}
+
+/*-------------------------------------------------------------------
+ * 
+ * CSS rules for large screens 
+ *
+-------------------------------------------------------------------*/
+
+/* In Dreamweaver, it is very easy to create selectors for three screen sizes 
+ * by using the Live View to change the screen size
+ */
+
+@media (min-width: 900px) {
+	
+	main img  {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.content-container {
+		display: flex;
+		align-items: normal;
+		gap: 5px; 
+		flex-direction: row; 
+	}
+
+	body {
+        background-color: #B0E0E6;
+        color: #2F4F4F;
+	    font-family: Arial, sans-serif;
+    }
+	
+	header {
+		background-image: url('../images/LogoLarge.png');
+		background-position: right top;
+		background-repeat: no-repeat;
+		min-height: 10px;
+		padding: 20px;
+	}
+	
+	.navbar {
+		background-color:#44aff2;
+        color: white;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+		transition: all 0.3s ease; 
+	}
+
+	main-left-container {
+		padding: 10px;
+	}
+	
+	main-right-container {
+		padding: 10px;
+	}	
+
+}
