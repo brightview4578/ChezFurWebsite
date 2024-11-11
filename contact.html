@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <!--Heading for the conact page-->
+    <!--Heading for the contact page-->
     <header>
         <h1 id="page-title">Chez Fur</h1>
         <h3>by Suzy Schaffer</h3>
@@ -20,27 +20,72 @@
 
         <nav class="navcontainer">
 
-        <a href="index.html">Home</a>
-		<a href="index-2.html">Home (NEW)</a>
-        <a href="menu.html">Menu</a>
-        <a href="your-hosts.html">Your Hosts</a>
-        <a href="contact.html">Contact</a>
-        <a href="Adoptions.html">Adoptions</a>
+            <a href="index.html">Home</a>
+            <a href="index-2.html">Home (NEW)</a>
+            <a href="menu.html">Menu</a>
+            <a href="your-hosts.html">Your Hosts</a>
+            <a href="contact.html">Contact</a>
+            <a href="Adoptions.html">Adoptions</a>
 
         </nav>
 
+        <!-- Grid container with two equal columns-->
+        <main class="contact-grid-container">
 
-        <main>
+            <div class="image-container">
 
-            <!-- Image Source: https://www.pexels.com/photo/close-up-photo-of-cat-sitting-on-grass-1642227/ -->
-            <img class="img-default" src="images/CatSeating.jpg" alt="Cute Cat is seating on the  grass" width="400">
+                <!-- Image Source: https://www.pexels.com/photo/close-up-photo-of-cat-sitting-on-grass-1642227/ -->
+                <img  src="images/CatSeating.jpg" alt="Cute Cat is seating on the  grass" height = 100%>
+                    
+            </div>
 
+            <div class="form-container">
 
             <!--This is a greeting-->
-            <h1>Contact Page </h1>
+            <h1>Contact Us </h1>
+           
+            <p>Let us know how to contact you with the answers you need.</p>
+            
+            <p>If you have any questions, please fill out the form below, and we will get back to you as soon as
+                possible.
+            </p>
+            
+            <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+                <!-- Name Field -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br><br>
 
-            <!--Content Paragraph-->
-            <p>This is a placeholder text for the Contact page </p>
+                <!-- E-Mail Field -->
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required placeholder="example@domain.com">
+                <br><br>
+
+                <!-- Phone Field -->
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <small>Format: 999-999-9999</small>
+                <br><br>
+
+                <!-- Preferred Contact Method Field -->
+                <label for="contact-method">Preferred Contact Method:</label>
+                <select id="contact-method" name="contact-method">
+                    <option value="email" selected>Email me</option>
+                    <option value="phone-afternoon">Phone me between 1pm – 4pm</option>
+                    <option value="phone-evening">Phone me between 6pm – 9pm</option>
+                </select>
+                <br><br>
+
+                <!-- Question or Contact field -->
+                <label for="message">Question or Concern?</label>
+                <textarea id="message" name="message" rows="5" cols="40"
+                    placeholder="Write your question or concern here..."></textarea>
+
+                <!-- Button to submit the form -->
+                <button type="submit">Send Now!</button>
+            </form>
+        </div>
+
         </main>
 
     </div>
@@ -50,7 +95,9 @@
         <p>Copyright &copy; 2024 Suzy Schaffer<br>
             <a href="mailto:yourfirstname@yourlastname.com">yourfirstname@yourlastname.com</a>
         </p>
+        <p>Today's date is: <span id="current-date"></span></p>
     </footer>
+    <script src="scripts/footerDate.js" defer></script>
 </body>
 
 </html>

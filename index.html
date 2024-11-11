@@ -4,12 +4,14 @@
 <head>
     <link rel="stylesheet" href="stylesheets/ChezFur.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <meta charset="utf-8">
     <title>Chez Fur</title>
+    
 </head>
 
-<body>
+<!-- show the alert using the onLoad event -->
+<body onload="displayWelcomeMessage()">
     <!--Heading for the webpage-->
     <header>
 
@@ -22,7 +24,6 @@
 
         <nav class="navcontainer">
 			
-
             <a href="index.html">Home</a>
 			<a href="index-2.html">Home (NEW)</a>
             <a href="menu.html">Menu</a>
@@ -36,6 +37,7 @@
 
             <p>Welcome to <span>Chez Fur Cat Café</span>, where you will enjoy delightful meals and purrfect company!
             </p>
+           
 
             <!-- Image Source: https://www.pexels.com/photo/assorted-color-kittens-45170/ -->
             <img class="img-default" src="images/CatsPlaying.jpg" alt="Cute kittens are playing in the grass">
@@ -69,7 +71,13 @@
         <p>Copyright &copy; 2024 Suzy Schaffer<br>
             <a href="mailto:yourfirstname@yourlastname.com"><span>yourfirstname@yourlastname.com</span></a>
         </p>
+        <p>Today's date is  <span id="current-date"></span></p>
     </footer>
+
+    <!-- Links to the JavaScript files used by the webpage -->
+    <script src="./scripts/main.js" defer></script>
+    <script src="./scripts/footerDate.js" defer></script>
+    
 </body>
 
 </html>
