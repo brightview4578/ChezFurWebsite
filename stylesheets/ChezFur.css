@@ -46,6 +46,7 @@ main {
     
 	/*main content fills the remaining space */
 	overflow: scroll;
+    padding: 15px;
 }
 
 footer a {
@@ -373,6 +374,15 @@ input:focus, select:focus, textarea:focus, button:focus {
     outline: none; 
     border-color: #4a235a; 
     box-shadow: 0 0 5px #4a235a;
+}
+
+
+/* Style for video of the Home page */
+video {
+    width: 70%; 
+    height: auto; 
+    max-width: 100%; 
+    padding: 15px;
 }
 
 
